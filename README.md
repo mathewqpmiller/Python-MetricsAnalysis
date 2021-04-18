@@ -16,6 +16,10 @@ In this activity, I was tasked with creating a Python script that will analyze t
 * Calculate the maximum increase in profits and identify the date it occured
 * Calculate the minimum increase in profits and identify the date it occured
 
+<p align="center">
+    <img src="https://github.com/mathewqpmiller/Python-Financial_and_Election_Analysis/blob/main/PyBank/Analysis/financial_analysis.PNG?raw=true" height ="350">
+</p>
+
 ## Activity 2 - PyPoll:
 
 In this activity, I am tasked with assisting a small, rural town modernize its vote counting process.
@@ -28,4 +32,8 @@ With a given set of collected voter poll data, I am to create a Python script th
 * Calculate each candidates votes received percentage
 * Calculate each candidates votes received count
 * Find out who the winner of the election is
+
+<p align="center">
+    <img src="https://github.com/mathewqpmiller/Python-Financial_and_Election_Analysis/blob/main/PyPoll/Analysis/election_results.PNG?raw=true" height ="350">
+</p>
 
