@@ -1,60 +1,51 @@
 ## Python Script for Homework Assignment number three, the PyBank portion. ##
 
-# Objective 1: Import modules os and csv
-
+# Import Modules
 import os
 import csv
 
-# Objective 2: Set the path for the CSV file in PyBankcsv
+# Path Directory
+py_bank_csv = os.path.join("Resources","budget_data.csv")
 
-PyBankcsv = os.path.join("Resources","budget_data.csv")
-
-# Objective 3: Create the lists to store data. 
-
+# Create Lists 
 profit = []
 monthly_changes = []
 date = []
 
-# Initialize the variables as required.
- 
+# Initialize Variable 
 count = 0
 total_profit = 0
 total_change_profits = 0
 initial_profit = 0
 
-# Open the CSV using the set path PyBankcsv
-
-with open(PyBankcsv, newline="") as csvfile:
+# Read CSV
+with open(py_bank_csv, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     csv_header = next(csvreader)
 
-    # Conducting the ask
+    # For Loop
     for row in csvreader:    
-      # Use count to count the number months in this dataset
+      # Count Iteration
       count = count + 1 
-
-      # Will need it when collecting the greatest increase and decrease in profits
+      # Append Date
       date.append(row[0])
-
-      # Append the profit information & calculate the total profit
+      # Append Profit
       profit.append(row[1])
+      # Calculate Total Profit
       total_profit = total_profit + int(row[1])
-
-      #Calculate the average change in profits from month to month. Then calulate the average change in profits
+      # Calculate Month-to-Month Change in Profits
       final_profit = int(row[1])
       monthly_change_profits = final_profit - initial_profit
-
-      #Store these monthly changes in a list
+      # Append Month-to-Month Change in Profits
       monthly_changes.append(monthly_change_profits)
-
+      # Parse Calculated Profits
       total_change_profits = total_change_profits + monthly_change_profits
       initial_profit = final_profit
-
-      #Calculate the average change in profits
+      # Calculate Average Change in Profits
       average_change_profits = (total_change_profits/count)
-      
-      #Find the max and min change in profits and the corresponding dates these changes were obeserved
+      # Find Max Increase in Profits 
       greatest_increase_profits = max(monthly_changes)
+      # Find Min Increase in Profits
       greatest_decrease_profits = min(monthly_changes)
 
       increase_date = date[monthly_changes.index(greatest_increase_profits)]
@@ -80,6 +71,3 @@ with open('financial_analysis.txt', 'w') as text:
     text.write("    Greatest Increase in Profits: " + str(increase_date) + " ($" + str(greatest_increase_profits) + ")\n")
     text.write("    Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(greatest_decrease_profits) + ")\n")
     text.write("----------------------------------------------------------\n")
-
-# Note to TA: The output does not look like the one provided in the HW instructions. 
-# I believe the budget_data.csv file is not the same as one used to come up with the sample text. 
