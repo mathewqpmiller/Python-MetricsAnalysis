@@ -50,7 +50,8 @@ with open(py_bank_csv, newline="") as csvfile:
 
       increase_date = date[monthly_changes.index(maximum_profit_increase)]
       decrease_date = date[monthly_changes.index(maximum_profit_decrease)]
-      
+
+    # Print to Terminal 
     print("----------------------------------------------------------")
     print("PyBank Financial Analysis")
     print("----------------------------------------------------------")
@@ -61,7 +62,11 @@ with open(py_bank_csv, newline="") as csvfile:
     print("Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(maximum_profit_decrease)+ ")")
     print("----------------------------------------------------------")
 
-with open('financial_analysis.txt', 'w') as text:
+# Export Path
+py_bank_output = os.path.join("Analysis","financial_analysis.txt")
+
+# Export to File
+with open(py_bank_output, 'w') as text:
     text.write("----------------------------------------------------------\n")
     text.write("  PyBank Financial Analysis"+ "\n")
     text.write("----------------------------------------------------------\n\n")
