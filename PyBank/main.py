@@ -42,32 +42,32 @@ with open(py_bank_csv, newline="") as csvfile:
       total_change_profits = total_change_profits + monthly_change_profits
       initial_profit = final_profit
       # Calculate Average Change in Profits
-      average_change_profits = (total_change_profits/count)
+      mean_profit_change = (total_change_profits/count)
       # Find Max Increase in Profits 
-      greatest_increase_profits = max(monthly_changes)
+      maximum_profit_increase = max(monthly_changes)
       # Find Min Increase in Profits
-      greatest_decrease_profits = min(monthly_changes)
+      maximum_profit_decrease = min(monthly_changes)
 
-      increase_date = date[monthly_changes.index(greatest_increase_profits)]
-      decrease_date = date[monthly_changes.index(greatest_decrease_profits)]
+      increase_date = date[monthly_changes.index(maximum_profit_increase)]
+      decrease_date = date[monthly_changes.index(maximum_profit_decrease)]
       
     print("----------------------------------------------------------")
-    print("Financial Analysis")
+    print("PyBank Financial Analysis")
     print("----------------------------------------------------------")
     print("Total Months: " + str(count))
     print("Total Profits: " + "$" + str(total_profit))
-    print("Average Change: " + "$" + str(int(average_change_profits)))
-    print("Greatest Increase in Profits: " + str(increase_date) + " ($" + str(greatest_increase_profits) + ")")
-    print("Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(greatest_decrease_profits)+ ")")
+    print("Average Change: " + "$" + str(int(mean_profit_change)))
+    print("Greatest Increase in Profits: " + str(increase_date) + " ($" + str(maximum_profit_increase) + ")")
+    print("Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(maximum_profit_decrease)+ ")")
     print("----------------------------------------------------------")
 
 with open('financial_analysis.txt', 'w') as text:
     text.write("----------------------------------------------------------\n")
-    text.write("  Financial Analysis"+ "\n")
+    text.write("  PyBank Financial Analysis"+ "\n")
     text.write("----------------------------------------------------------\n\n")
     text.write("    Total Months: " + str(count) + "\n")
     text.write("    Total Profits: " + "$" + str(total_profit) +"\n")
-    text.write("    Average Change: " + '$' + str(int(average_change_profits)) + "\n")
-    text.write("    Greatest Increase in Profits: " + str(increase_date) + " ($" + str(greatest_increase_profits) + ")\n")
-    text.write("    Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(greatest_decrease_profits) + ")\n")
+    text.write("    Average Change: " + '$' + str(int(mean_profit_change)) + "\n")
+    text.write("    Greatest Increase in Profits: " + str(increase_date) + " ($" + str(maximum_profit_increase) + ")\n")
+    text.write("    Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(maximum_profit_decrease) + ")\n")
     text.write("----------------------------------------------------------\n")
