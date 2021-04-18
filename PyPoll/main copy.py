@@ -49,27 +49,28 @@ with open(PyPollcsv, newline="") as csvfile:
 # Print to terminal
 # Output perhaps needs to be rounded to 3 decimal points. Leaving that formatting out for now) 
  
-print("-------------------------")
-print("Election Results")   
-print("-------------------------")
-print("Total Votes :" + str(count))    
-print("-------------------------")
-for i in range(len(unique_candidate)):
-            print(unique_candidate[i] + ": " + str(vote_percent[i]) +"% (" + str(vote_count[i])+ ")")
-print("-------------------------")
-print("The winner is: " + winner)
-print("-------------------------")
+   # print results, use a loop for the number of uniqueCandidates
+    print('PyPoll Election Results')
+    print('--------------------------------')
+    print(f'Total Votes: {count}')
+    print('--------------------------------')
+    for i in range(len(unique_candidate)):
+        print(f'{unique_candidate[i]}: {vote_percent[i]}% {vote_count[i]}')
+    print('--------------------------------')
+    print(f'Winner: {winner}')
+    print('--------------------------------')
 
-# Print to a text file: election_results.txt
-# Output perhaps needs to be rounded to 3 decimal points. Leaving that formatting out for now) 
+    # set exit path
+    poll_output = os.path.join("PyPollResults.txt")
 
-with open('election_results.txt', 'w') as text:
-    text.write("Election Results\n")
-    text.write("---------------------------------------\n")
-    text.write("Total Vote: " + str(count) + "\n")
-    text.write("---------------------------------------\n")
-    for i in range(len(set(unique_candidate))):
-        text.write(unique_candidate[i] + ": " + str(vote_percent[i]) +"% (" + str(vote_count[i]) + ")\n")
-    text.write("---------------------------------------\n")
-    text.write("The winner is: " + winner + "\n")
-    text.write("---------------------------------------\n")
+    # write out results to text file
+    with open(poll_output, "w") as txtfile:
+        txtfile.write('PyPoll Election Results')
+        txtfile.write('\n------------------------------------')
+        txtfile.write(f'\nTotal Votes: {count}')
+        txtfile.write('\n------------------------------------')
+        for i in range (len(unique_candidate)):
+            txtfile.write(f'\n{unique_candidate[i]}: {vote_percent[i]}% {vote_count[i]}')
+        txtfile.write('\n------------------------------------')
+        txtfile.write(f'\nWinner: {winner}')
+        txtfile.write('\n------------------------------------')

@@ -1,4 +1,4 @@
-## Python Script for Homework Assignment number three, the PyBank portion. ##
+## Python Script for Homework Assignment number three: PyBank ##
 
 # Import Modules
 import os
