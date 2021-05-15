@@ -1,7 +1,6 @@
-# Python-Financial_and_Election_Analysis
-University of Oregon: Data Analytics Boot Camp repository for homework assignment number 3.
+# Python: Financial and Election Analysis
 
-## Python Activities - "Py Me Up, Charlie"
+## Python Calculations 
 
 
 ## Activity1 - PyBank:
@@ -37,3 +36,9 @@ With a given set of collected voter poll data, I am to create a Python script th
     <img src="https://github.com/mathewqpmiller/Python-Financial_and_Election_Analysis/blob/main/PyPoll/Analysis/election_results.PNG?raw=true" height ="350">
 </p>
 
+<p align="center">
+UNIVERSITY OF OREGON: Data Analytics Boot Camp - Repository for project 3(Python Challenge)
+</p>
+<p align="center">
+Mathew Miller © 2021. All Rights Reserved.
+</p>
