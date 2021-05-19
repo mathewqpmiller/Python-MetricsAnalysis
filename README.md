@@ -3,7 +3,7 @@
 ## Python For Loops 
 
 
-## Task 1: PyBank Print and Export
+### Task 1: PyBank Print and Export
 
 In this activity, I was tasked with creating a Python script that will analyze the financial records of a company. With a given set of financial records I am to create a report that calculates various metrics. The dataset is provided in a .csv format and is composed of two columns: Date and Profit/Losses. The steps I took to complete the task are as follows.
 * Identify the total number of months within the dataset
@@ -13,10 +13,23 @@ In this activity, I was tasked with creating a Python script that will analyze t
 * Calculate the minimum increase in profits and identify the date it occured
 
 <p align="center">
-    <img src="https://github.com/mathewqpmiller/Python-Financial_and_Election_Analysis/blob/main/PyBank/Analysis/financial_analysis.PNG?raw=true" height ="350">
+    <img src="https://github.com/mathewqpmiller/Python-MetricsAnalysis/blob/main/PyBank/Images/PyBankForLoop.PNG?raw=true" height ="350">
 </p>
 
-## Task 2: PyPoll Print and Export
+* Print the calculated python results into the VSCode terminal
+
+<p align="center">
+    <img src="https://github.com/mathewqpmiller/Python-MetricsAnalysis/blob/main/PyBank/Images/PyBankTerminalPrint.PNG?raw=true" height ="190">
+</p>
+
+* Export the printed VSCode terminal results to an editable text file
+
+<p align="center">
+    <img src="https://github.com/mathewqpmiller/Python-MetricsAnalysis/blob/main/PyBank/Images/PyBankExport.PNG?raw=true" height ="350">
+</p>
+
+
+### Task 2: PyPoll Print and Export
 
 In this activity, I am tasked with assisting a small, rural town modernize its vote counting process.
 With a given set of collected voter poll data, I am to create a Python script that analyzes the votes and calculates some standard voting metrics. The dataset provided in a .csv file format and is composed of three columns: Voter ID, County, and Candidate. The steps I took to complete the task are as follows.
@@ -27,9 +40,23 @@ With a given set of collected voter poll data, I am to create a Python script th
 * Find out who the winner of the election is
 
 <p align="center">
-    <img src="https://github.com/mathewqpmiller/Python-Financial_and_Election_Analysis/blob/main/PyPoll/Analysis/election_results.PNG?raw=true" height ="350">
+    <img src="https://github.com/mathewqpmiller/Python-MetricsAnalysis/blob/main/PyPoll/Images/PyPollForLoop.JPG?raw=true" height ="250">
 </p>
 
+* Print the calculated python results into the VSCode terminal
+
+<p align="center">
+    <img src="https://github.com/mathewqpmiller/Python-MetricsAnalysis/blob/main/PyPoll/Images/PyPollTerminalPrint.JPG?raw=true" height ="190">
+</p>
+
+* Export the printed VSCode terminal results to an editable text file
+
+<p align="center">
+    <img src="https://github.com/mathewqpmiller/Python-MetricsAnalysis/blob/main/PyPoll/Images/PyPollExport.JPG?raw=true" height ="400">
+</p>
+
+#
+#
 <p align="center">
 UNIVERSITY OF OREGON: Data Analytics Boot Camp - Repository for project 3(Python Challenge)
 </p>
